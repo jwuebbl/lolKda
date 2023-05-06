@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/lol-kda",
-            "index": "src/index.html",
+            "index": "src/lolKda.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
