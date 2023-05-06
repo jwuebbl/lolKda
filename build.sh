@@ -7,7 +7,6 @@ if [ "$(pwd)" != "/c/Users/JeffW/Desktop/lolKDA" ]; then
     exit
 fi
 
-
 # Build the app.
 ng build
 
@@ -22,8 +21,6 @@ fi
 # The python script edits lolKda.html to be served by flask.
 # The python script uses the cli argument --from-build-script to check if the script was called from this bash script.
 ./prepBuildForProd.py --from-build-script
-
-
 
 # Get the output file names.
 runtimeJs=$(ls dist/lol-kda/ | grep runtime)
