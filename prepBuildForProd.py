@@ -1,5 +1,10 @@
 #!/c/Users/JeffW/AppData/Local/Microsoft/WindowsApps/python.exe
+import sys
 
+if "--from-build-script" not in sys.argv:
+    print("This script should only be called from build.sh. Exiting...")
+    exit(1)
+    
 with open('C:\\Users\\JeffW\\Desktop\\lolKDA\\dist\\lol-kda\\lolKda.html', 'r') as file:
     lines = file.readlines()
 
