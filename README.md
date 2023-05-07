@@ -1,6 +1,8 @@
 # LolKda
+## How to Build the Project for Production
+1. From the projects root directory run the script ***build.sh***
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+        ./build.sh
 
 ## How to change the output html file name
 
