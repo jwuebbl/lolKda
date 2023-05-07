@@ -56,7 +56,6 @@ export class KdaInputFormComponent {
         assists: this.assists
         };
         this.http.post('/submitLeagueGame', data).subscribe(observer);
-        // this.http.post('http://whoisthebigdog.com:80/submitLeagueGame', data).subscribe(observer);
     } 
   }
 }
