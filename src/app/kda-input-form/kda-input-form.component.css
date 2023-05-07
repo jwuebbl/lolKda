@@ -1,0 +1,6 @@
+#formWrapperDiv {
+    display: flex; /* set the container element to display as a flex container */
+    justify-content: center; /* center the child elements horizontally */
+    align-items: center; /* center the child elements vertically */
+    height: 100vh; /* set the height of the container to the full viewport height */  
+}

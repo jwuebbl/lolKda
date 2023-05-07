@@ -28,7 +28,6 @@ export class KdaInputFormComponent {
   }
 
   kdaSubmit() {
-    console.log(this.selectedCharacter);
     if (this.selectedCharacter == "") {
       (<HTMLInputElement>document.getElementById("char")).style.backgroundColor = "Red";
     } else if (this.kills < 0) {
@@ -49,11 +48,11 @@ export class KdaInputFormComponent {
             (<HTMLInputElement>document.getElementById("errorMessage")).innerText = "There was an error POSTing the data. Please try again. Number of attempts: " + this.numOfAttempts;
           }
         };
-        var data = {
+        const data = {
         char: this.selectedCharacter,
         kills: this.kills,
         deaths: this.deaths,
-        assists: this.assists
+        assists: this.assists,
         };
         this.http.post('/submitLeagueGame', data).subscribe(observer);
     } 
