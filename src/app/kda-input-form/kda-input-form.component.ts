@@ -25,7 +25,6 @@ export class KdaInputFormComponent {
     (<HTMLInputElement>document.getElementById("deaths")).style.backgroundColor = "White";
     (<HTMLInputElement>document.getElementById("assists")).style.backgroundColor = "White";
     (<HTMLInputElement>document.getElementById("char")).style.backgroundColor = "White";
-    (<HTMLInputElement>document.getElementById("errorMessage")).innerText = "";
   }
 
   kdaSubmit() {
@@ -40,13 +39,13 @@ export class KdaInputFormComponent {
     } else {
         const observer = {
           next: (response: any) => {
-            console.log('POST request successful:', response);
+            (<HTMLInputElement>document.getElementById("statusMessage")).innerText = "Data saved successfully! I'm ready for another request.";
             this.resetAllFields();
           },
           error: (error: any) => {
             console.log('POST request error:', error);
             this.numOfAttempts++;
-            (<HTMLInputElement>document.getElementById("errorMessage")).innerText = "There was an error POSTing the data. Please try again. Number of attempts: " + this.numOfAttempts;
+            (<HTMLInputElement>document.getElementById("statusMessage")).innerText = "There was an error POSTing the data. Please try again. Number of attempts: " + this.numOfAttempts;
           }
         };
         const data = {
