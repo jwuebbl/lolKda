@@ -20,11 +20,12 @@ export class KdaInputFormComponent {
     this.kills = 0;
     this.deaths = 0;
     this.assists = 0;
-    this.numOfAttempts = 0;
+    this.selectedCharacter = "";
     (<HTMLInputElement>document.getElementById("kills")).style.backgroundColor = "White";
     (<HTMLInputElement>document.getElementById("deaths")).style.backgroundColor = "White";
     (<HTMLInputElement>document.getElementById("assists")).style.backgroundColor = "White";
     (<HTMLInputElement>document.getElementById("char")).style.backgroundColor = "White";
+    (<HTMLInputElement>document.getElementById("errorMessage")).innerText = "";
   }
 
   kdaSubmit() {

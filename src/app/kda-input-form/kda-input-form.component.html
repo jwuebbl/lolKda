@@ -1,20 +1,27 @@
-<div id="formWrapperDiv">
-        <p id="errorMessage"></p>
-        <form #kdaForm="ngForm" (ngSubmit)="kdaSubmit()">
-                <label for="char">Character Played:</label>
-                <select id="char" name="char" [(ngModel)]="selectedCharacter">
-                        <option *ngFor="let char of leageCharacters" [value]="char">{{ char }}</option>
-                </select>
+<p id="errorMessage"></p>
+<div id="pageWrapper">
+        <div id="buttonWrapper">
+                <a href=menu><button>Main Menu</button></a>
+                <button (click)="resetAllFields()">Reset Form</button>
+        </div>
 
-                <label for="kills">kills</label>
-                <input type="number" [(ngModel)]="kills" name="kills" placeholder="0" min="0" id="kills" required><br>
+        <div id="formWrapper">
+                <form #kdaForm="ngForm" (ngSubmit)="kdaSubmit()">
+                        <label for="char">Character Played: </label>
+                        <select id="char" name="char" [(ngModel)]="selectedCharacter">
+                                <option *ngFor="let char of leageCharacters" [value]="char">{{ char }}</option>
+                        </select><br>
 
-                <label for="deaths">deaths</label>
-                <input type="number" [(ngModel)]="deaths" name="deaths" placeholder="0" min="0" id="deaths" required><br>
+                        <label for="kills">Kills: </label>
+                        <input type="number" [(ngModel)]="kills" name="kills" placeholder="0" min="0" id="kills" required>
 
-                <label for="assists">assists</label>
-                <input type="number" [(ngModel)]="assists" name="assists" placeholder="0" min="0" id="assists" required><br>
-                <button type="submit">Submit</button>
-                <a href=menu><button>Back to Main Menu</button></a>
-        </form>
+                        <label for="deaths">Deaths: </label>
+                        <input type="number" [(ngModel)]="deaths" name="deaths" placeholder="0" min="0" id="deaths" required>
+
+                        <label for="assists">Assists: </label>
+                        <input type="number" [(ngModel)]="assists" name="assists" placeholder="0" min="0" id="assists" required>
+                        <button type="submit">Submit</button>
+                </form>
+        </div>
 </div>
+

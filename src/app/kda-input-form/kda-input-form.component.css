@@ -1,6 +1,16 @@
-#formWrapperDiv {
-    display: flex; /* set the container element to display as a flex container */
+#pageWrapper {
+    display: flex;
     justify-content: center; /* center the child elements horizontally */
-    align-items: center; /* center the child elements vertically */
     height: 100vh; /* set the height of the container to the full viewport height */  
+    align-items: center; /* center contents vertically */
+}
+
+#buttonWrapper {
+    flex: 0;
+    margin: 5px;
+}
+
+#formWrapper {
+    flex: 0;
+    margin: 5px;
 }
