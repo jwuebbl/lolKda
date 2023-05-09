@@ -18,6 +18,12 @@
                                 <option *ngFor="let char of leageCharacters" [value]="char">{{ char }}</option>
                         </select><br>
 
+                        <label for="winLoss">Win/Loss: </label>
+                        <select [(ngModel)]="winLoss" name="winLoss" id="winLoss" required>
+                                <option value="W">W</option>
+                                <option value="L">L</option>
+                        </select><br>
+
                         <label for="kills">Kills: </label>
                         <input type="number" [(ngModel)]="kills" name="kills" placeholder="0" min="0" id="kills" required><br>
 
