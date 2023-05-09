@@ -1,26 +1,33 @@
-<p id="statusMessage"></p>
 <div id="pageWrapper">
-        <div id="buttonWrapper">
-                <a href=menu><button>Main Menu</button></a>
-                <button (click)="resetAllFields()">Reset Form</button>
+        <div id="mainMenuWrapper">
+                <a href=menu><button>Back to Main Menu</button></a>
+        </div>
+
+        <div id="signInAsWrapper">
+                <p id="signedInAs">You are signed in as: {{ username }}</p>
+        </div>
+
+        <div id="statusMessageWrapper">
+                <p id="statusMessage"></p>
         </div>
 
         <div id="formWrapper">
-                <form #kdaForm="ngForm" (ngSubmit)="kdaSubmit()">
+                <form id="form" #kdaForm="ngForm" (ngSubmit)="kdaSubmit()">
                         <label for="char">Character Played: </label>
                         <select id="char" name="char" [(ngModel)]="selectedCharacter">
                                 <option *ngFor="let char of leageCharacters" [value]="char">{{ char }}</option>
                         </select><br>
 
                         <label for="kills">Kills: </label>
-                        <input type="number" [(ngModel)]="kills" name="kills" placeholder="0" min="0" id="kills" required>
+                        <input type="number" [(ngModel)]="kills" name="kills" placeholder="0" min="0" id="kills" required><br>
 
                         <label for="deaths">Deaths: </label>
-                        <input type="number" [(ngModel)]="deaths" name="deaths" placeholder="0" min="0" id="deaths" required>
+                        <input type="number" [(ngModel)]="deaths" name="deaths" placeholder="0" min="0" id="deaths" required><br>
 
                         <label for="assists">Assists: </label>
-                        <input type="number" [(ngModel)]="assists" name="assists" placeholder="0" min="0" id="assists" required>
+                        <input type="number" [(ngModel)]="assists" name="assists" placeholder="0" min="0" id="assists" required><br>
                         <button type="submit">Submit</button>
+                        <button id="resetFormButton" type="button" (click)="resetAllFields()">Reset Form</button>
                 </form>
         </div>
 </div>
