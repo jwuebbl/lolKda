@@ -36,5 +36,26 @@
                         <button id="resetFormButton" type="button" (click)="resetAllFields(true)">Reset Form</button>
                 </form>
         </div>
+
+        <!-- Display the query results using Angular -->
+        <div id="kdaBoardWrapper" *ngFor="let row of leagueGamesScoreboard">
+                <table id="kdaBoard">
+                        <tr>Displaying Last 5 Games:</tr>
+                        <tr>
+                                <th>Character</th>
+                                <th>Kills</th>
+                                <th>Deaths</th>
+                                <th>Assists</th>
+                                <th>Win/Loss</th>
+                        </tr>
+                        <tr *ngFor="let row of leagueGamesScoreboard">
+                                <td>{{row[2]}}</td>
+                                <td>{{row[3]}}</td>
+                                <td>{{row[4]}}</td>
+                                <td>{{row[5]}}</td>
+                                <td>{{row[6]}}</td>
+                        </tr>
+                </table>
+      </div>      
 </div>
 

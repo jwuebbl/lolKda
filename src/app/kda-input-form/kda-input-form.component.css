@@ -71,3 +71,29 @@ select {
     right: 0;
     width: 100px;
 }
+
+#kdaBoardWrapper {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+}
+
+#kdaBoard {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#kdaBoard td, #kdaBoard th {
+    border: 1px solid yellow;
+    padding: 8px;
+}
+
+#kdaBoard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: yellow;
+  }
