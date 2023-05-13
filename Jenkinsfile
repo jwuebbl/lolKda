@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test Connection') {
             steps {
-                sh 'echo Testing the webhook'
+                sh 'echo Testing the webhook,1 '
             }
         }
     }
