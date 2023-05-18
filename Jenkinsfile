@@ -18,7 +18,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh 'call the flask build pipeline here. Flask will pull the latest artifact everytime?'
+                echo 'call the flask build pipeline here. Flask will pull the latest artifact everytime?'
             }
         }
     }
