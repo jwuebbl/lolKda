@@ -11,7 +11,7 @@ pipeline {
                     archiveArtifacts artifacts: 'dist/**'
                 }
                 failure {
-                    echo 'This will run only if the build fails'
+                    echo 'A error occured during the build.'
                 }
             }
         }
