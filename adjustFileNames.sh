@@ -6,13 +6,13 @@ stylesCss=$(ls dist/lol-kda/ | grep styles)
 echo "File names collected: $runtimeJs, $polyfillsJs, $mainJs, $stylesCss"
 
 echo "Renaming $runtimeJs to lolKdaRunTime.js"
-mv $runtimeJs lolKdaRunTime.js
+mv ./$runtimeJs ./lolKdaRunTime.js
 
 echo "Renaming $polyfillsJs to lolKdaPolyfills.js"
-mv $polyfillsJs lolKdaPolyfills.js
+mv ./$polyfillsJs ./lolKdaPolyfills.js
 
 echo "Renaming $mainJs to lolKdaMain.js"
-mv $mainJs lolKdaMain.js
+mv ./$mainJs ./lolKdaMain.js
 
 echo "Renaming $stylesCss to lolKdaStyles.js"
-mv $stylesCss lolKdaStyles.js
+mv ./$stylesCss ./lolKdaStyles.js

@@ -4,8 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ng build'
-                sh './adjustDist.py'
-                sh './adjustFileNames.sh'
+                sh 'python ./adjustDist.py'
+                sh 'bash ./adjustFileNames.sh'
             }
             
             post {
