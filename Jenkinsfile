@@ -11,7 +11,7 @@ pipeline {
                     archiveArtifacts artifacts: 'dist/**'
                 }
                 failure {
-                    echo 'A error occured during the build.'
+                    echo 'A test error occured during the build.'
                 }
             }
         }
